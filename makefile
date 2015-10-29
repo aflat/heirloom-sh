@@ -24,9 +24,9 @@ SPELL=-DSPELL
 # A BSD-compatible install command.
 #
 ifneq ("$(wildcard /usr/ucb/install)","")
-INSTALL := /usr/ucb/install
+UCBINST :=/usr/ucb/install
 else
-INSTALL := /usr/bin/install
+UCBINST :=/usr/bin/install
 endif
 
 #
