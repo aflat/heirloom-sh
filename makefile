@@ -23,7 +23,11 @@ SPELL=-DSPELL
 #
 # A BSD-compatible install command.
 #
-UCBINST=/usr/ucb/install
+ifneq ("$(wildcard /usr/ucb/install)","")
+INSTALL := /usr/ucb/install
+else
+INSTALL := /usr/bin/install
+endif
 
 #
 # The strip command that is used at installation time.
